@@ -476,6 +476,14 @@ function handleKeyEventNormal(key) {
             goToEndOfLine()
             switchModeToInsert()
             break
+        case "C":
+            selectToEndOfLine()
+            runLongStringOp("c")
+            break
+        case "D":
+            selectToEndOfLine()
+            runLongStringOp("d")
+            break
         case "v":
             switchModeToVisual()
             break
@@ -575,9 +583,11 @@ function handleKeyEventVisualLine(key) {
             goToDocStart(true)
             break
         case "c":
+        case "C":
         case "d":
+        case "D":
         case "y":
-            runLongStringOp(key)
+            runLongStringOp(key.toLowerCase())
             break
         case "i":
         case "a":
