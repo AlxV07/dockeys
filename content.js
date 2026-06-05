@@ -708,7 +708,7 @@ function activateTopLevelMenu(menuCaption) {
 
 let cursorTop;
 setTimeout(() => {
-	const iframe = document.getElementsByTagName('iframe')[0]   // https://stackoverflow.com/a/4388829
+	const iframe = document.querySelector('.docs-texteventtarget-iframe')
 	iframe.contentDocument.addEventListener('keydown', eventHandler, true)
 	cursorTop = document.getElementsByClassName("kix-cursor-top")[0] // element to edit to show normal vs insert mode
 	// Initiate to Normal Mode
